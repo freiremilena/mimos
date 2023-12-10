@@ -1,4 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
+
 <template>
     <div class="login-container container-fluid">
         <div class="left-side bg-dark text-light d-flex align-items-center justify-content-center">
@@ -9,11 +10,16 @@
 
         <div class="right-side d-flex align-items-center justify-content-center">
             <div>
-                <h1 class="mb-4">Login</h1>
+                <h1 class="mb-4">Cadastro</h1>
                 <form @submit.prevent="login">
                     <div class="mb-3">
                         <label for="username" class="form-label">Usuário:</label>
                         <input v-model="username" type="text" class="form-control" id="username" name="username" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input v-model="email" type="text" class="form-control" id="email" name="email" />
                     </div>
 
                     <div class="mb-3">
@@ -38,9 +44,10 @@ export default {
 
         const username = ref('');
         const password = ref('');
+        const email = ref('');
 
         const login = () => {
-            console.log(username.value, password.value)
+            console.log(username.value, password.value, email.value)
 
             router.push('/home');
         };
@@ -48,6 +55,7 @@ export default {
         return {
             username,
             password,
+            email,
             login,
         };
     },
@@ -69,6 +77,7 @@ export default {
 
 .left-side {
     min-width: 300px;
+    /* Defina a largura mínima conforme necessário */
 }
 
 .logo-container {

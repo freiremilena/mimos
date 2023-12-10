@@ -1,5 +1,9 @@
-import "bootstrap/dist/css/bootstrap.css"
-import "bootstrap-icons/font/bootstrap-icons.css"
+/* eslint-disable vue/no-reserved-component-names */
+/* eslint-disable vue/multi-word-component-names */
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 // import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -13,4 +17,7 @@ app.use(pinia)
 app.use(router)
 app.mount('#app')
 
-import "bootstrap/dist/js/bootstrap.js"
+app.component('Navbar', Navbar)
+app.component('Footer', Footer)
+
+import 'bootstrap/dist/js/bootstrap.js'
