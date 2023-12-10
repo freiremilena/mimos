@@ -7,7 +7,11 @@
                 <div class="text-container">
                     <h1>O serviço de rastreios de encomendas mais confiável</h1>
                     <p>Personalize suas encomendas <br>e acompanhe com notificações</p>
-                    <button>Comece agora</button>
+                    <router-link to="/sign-up" class="nav-link">
+                        <button>
+                            Comece agora
+                        </button>
+                    </router-link>
                 </div>
                 <div class="image-container">
                     <img src="../assets/Take Away-pana.png" alt="Imagem" />
